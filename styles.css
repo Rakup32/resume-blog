@@ -1,75 +1,78 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* styles.css */
+/* Add CSS Variables */
+:root {
+    --primary: #0073e6;
+    --background: #f4f4f4;
+    --text: #333;
+    --card-bg: white;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+[data-theme="dark"] {
+    --primary: #00a3ff;
+    --background: #1a1a1a;
+    --text: #f0f0f0;
+    --card-bg: #2d2d2d;
 }
 
-nav {
-    background: #0073e6;
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
     color: white;
-    padding: 15px 0;
-    text-align: center;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.hero {
-    background: #0073e6;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
+/* Animated Sections */
 .section {
-    padding: 40px 0;
-    background: white;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
 }
 
-h2 {
-    color: #0073e6;
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.skills-list {
-    list-style: none;
+/* Skill Bars */
+.skill-bars {
+    margin-top: 30px;
 }
 
-.skills-list li {
-    background: #0073e6;
-    color: white;
-    display: inline-block;
-    padding: 5px 15px;
-    margin: 5px;
+.skill-bar {
+    height: 10px;
+    background: #ddd;
     border-radius: 5px;
+    margin: 10px 0;
 }
 
-footer {
-    background: #0073e6;
-    color: white;
-    text-align: center;
-    padding: 10px;
+.skill-progress {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s ease-in-out;
 }
 
+/* Hover Effects */
+.job:hover {
+    transform: translateX(10px);
+    transition: transform 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}

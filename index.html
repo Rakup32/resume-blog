@@ -1,105 +1,44 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pukar Bhatta - Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Add font-awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Add theme toggle button -->
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <h1>Pukar Bhatta</h1>
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
+    <!-- Enhanced Hero Section -->
     <header class="hero">
         <div class="container">
-            <h2>Network Engineer | Cybersecurity Enthusiast</h2>
-            <p>3+ years of experience in designing, securing, and optimizing network infrastructures.</p>
+            <div class="hero-content">
+                <h2>Network Engineer | Cybersecurity Enthusiast</h2>
+                <p>3+ years of experience in designing, securing, and optimizing network infrastructures.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn">Hire Me</a>
+                    <a href="#" class="btn secondary">Download CV</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Profile Section -->
-    <section id="profile" class="section">
-        <div class="container">
-            <h2>Profile</h2>
-            <p>Innovative Network Engineer with expertise in configuring, troubleshooting, and optimizing network infrastructure. Skilled in cybersecurity and cloud networking.</p>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Professional Experience</h2>
-
-            <div class="job">
-                <h3>Network Engineer - Susags & Company</h3>
-                <span class="date">Dec 2023 - Present</span>
-                <ul>
-                    <li>Designed and maintained network infrastructures ensuring security and performance.</li>
-                    <li>Configured routers, switches, and firewalls while troubleshooting connectivity issues.</li>
-                    <li>Implemented security protocols including VPNs and intrusion detection systems.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Network Engineer - Askina Cable Network</h3>
-                <span class="date">Aug 2019 - July 2021</span>
-                <ul>
-                    <li>Led the migration of branch offices to MPLS, improving network reliability by 30%.</li>
-                    <li>Implemented VLAN segmentation and access control lists (ACLs).</li>
-                    <li>Designed redundant WAN architecture achieving 99.99% uptime.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Education</h2>
-            <p><strong>BSc. CSIT</strong> - Tribhuvan University (2014 - 2018)</p>
-            <p><strong>MBA (Financial Management)</strong> - Tribhuvan University (2021 - 2023)</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
+    <!-- Updated Skills Section -->
     <section id="skills" class="section">
         <div class="container">
             <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li>Networking: TCP/IP, OSPF, BGP, VLANs</li>
-                <li>Hardware: Cisco, Juniper, MikroTik</li>
-                <li>Programming: Python, C, C++</li>
-                <li>Cloud: AWS, Azure</li>
-            </ul>
+            <div class="skill-bars">
+                <div class="skill" data-percent="90%">
+                    <span class="skill-name">Network Security</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <!-- Add more skills similarly -->
+            </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:rakup32@gmail.com">rakup32@gmail.com</a></p>
-            <p>Phone: +9779845203160</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Pukar Bhatta | Resume Blog</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
